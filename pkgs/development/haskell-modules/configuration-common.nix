@@ -2569,14 +2569,14 @@ with haskellLib;
         mv test/bad/$f test/good/$f
       done
     '';
-    patches = (drv.patches or []) ++ [
+    patches = (drv.patches or [ ]) ++ [
       (pkgs.fetchpatch {
         name = "modernize-to-ghc-9.10.3-and-regress-tests-wrt-librsvg";
         url = "https://github.com/reanimate/reanimate-svg/pull/49.patch";
         sha256 = "sha256-8OLSJ+N4KebId/e5ceuQa/lF1rHugC01uoT+EVmgits=";
       })
     ];
-    buildTools = (drv.buildTools or []) ++ [
+    buildTools = (drv.buildTools or [ ]) ++ [
       # needed for testsuite
       pkgs.freefont_ttf
       pkgs.librsvg
@@ -2590,7 +2590,7 @@ with haskellLib;
     prePatch = drv.prePatch or "" + ''
       rm -f examples/decompose.hs
     '';
-    patches = (drv.patches or []) ++ [
+    patches = (drv.patches or [ ]) ++ [
       # https://github.com/reanimate/reanimate/pull/319
       # variant of PR https://github.com/reanimate/reanimate/pull/317
       (pkgs.fetchpatch {
@@ -2599,7 +2599,7 @@ with haskellLib;
         sha256 = "sha256-xHob2+LbLEBgjoWv/Fakg/GEICLDrrodPIF1dS7drwU=";
       })
     ];
-    buildTools = (drv.buildTools or []) ++ [
+    buildTools = (drv.buildTools or [ ]) ++ [
       # needed for testsuite
       pkgs.ffmpeg
       pkgs.texliveFull
