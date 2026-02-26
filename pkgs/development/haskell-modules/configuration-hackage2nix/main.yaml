@@ -120,6 +120,12 @@ extra-packages:
 
 # keep-sorted start skip_lines=1 case=no
 package-maintainers:
+  Ai-Ya-Ya:
+    - dataframe
+    - dataframe-persistent
+    - ihaskell-dataframe
+    - reanimate
+    - reanimate-svg
   alexfmpe:
     - basic-sop
     - commutative-semigroups
